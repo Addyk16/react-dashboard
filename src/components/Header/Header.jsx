@@ -11,7 +11,9 @@ import { SearchIcon } from "@heroicons/react/solid";
 import SidebarContext from "../../context/SidebarContext";
 
 const Header = () => {
-  const [isSidebarOpen, setIsSidebarOpen] =useState(true)
+  const { isSidebarOpen, setIsSidebarOpen } =
+    useContext(SidebarContext);
+
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
     console.log(isSidebarOpen);
@@ -29,7 +31,7 @@ const Header = () => {
             }`}
           />
         </button>
-        <span className="header-title">
+        <span className="header-title hidden md:block">
           Hello Mad ✋
         </span>
       </div>
@@ -39,7 +41,7 @@ const Header = () => {
           placeholder="Search"
         />
       </div>
-      <div className="header-right">
+      <div className="header-right hidden lg:flex">
         <button className="btn">
           <MdOutlineFileUpload size={22} />
           New Upload

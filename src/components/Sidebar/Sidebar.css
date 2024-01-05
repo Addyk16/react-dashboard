@@ -5,6 +5,21 @@
   transition: var(--transition-default);
   min-height: 100vh;
   box-shadow: #555 2px 0 5px;
+  z-index: 10;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 18px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--clr-pumpkin);
+    border-radius: 18px;
+  }
 }
 
 .title {

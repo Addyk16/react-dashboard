@@ -6,12 +6,14 @@ import { FaAngleRight } from "react-icons/fa6";
 import { TbSquareRoundedNumber2Filled } from "react-icons/tb";
 import "./Sidebar.css";
 import SidebarContext from "../../context/SidebarContext";
+import { IoMdClose } from "react-icons/io";
+
 
 const Sidebar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const { isSidebarOpen,setIsSidebarOpen } = useContext(SidebarContext);
   return (
     <div
-      className={`sidebar ${
+      className={`sidebar h-screen fixed ${
         isSidebarOpen ? "" : "sidebar-close"
       } `}>
       <div className="title">
@@ -21,6 +23,9 @@ const Sidebar = () => {
         <span className="title-name">
           Skilify Admin
         </span>
+        <button onClick={()=>setIsSidebarOpen(false)}>
+          <IoMdClose size={24} className="lg:hidden ml-3"/>
+        </button>
       </div>
       {/* navigation */}
       <nav className="navigation">
