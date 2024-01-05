@@ -1,0 +1,25 @@
+.stat {
+  display: flex;
+  column-gap: 30px;
+  color: var(--clr-primary);
+  align-items: center;
+  border-left: 2px solid var(--clr-primary);
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stat-text {
+  font-size: 17px;
+}
+
+.stat-icon {
+  color: var(--clr-primary-light);
+}

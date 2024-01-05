@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #5d5892;
+  --clr-primary-light: #8b7abf;
+  --clr-secondary: #1e1611;
+  --clr-white: #f9f8f7;
+  --clr-black: #2a2a2a;
+  --clr-pumpkin: #fa6e3b;
+  --clr-silver: #a8a5a6;
+  --clr-silver-v1: #bdbabb;
+  --clr-silver-light: rgb(238, 237, 242);
+  --clr-scarlet: #fe1e00;
+  --clr-scarlet-v1: rgb(254, 30, 0, 0.79);
+  --clr-green: #00fe93;
+  --clr-yellow: #fec80a;
+  --clr-jet: #302924;
+  --clr-peach: #ffc397;
+  --font-family-bai: "Bai Jamjuree", sans-serif;
+  /* transition related variable*/
+  --transition-default: all 300ms ease-in-out;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  color: unset;
+  text-decoration: none;
+  color: var(--clr-white);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.text-silver-v1 {
+  color: var(--clr-silver-v1);
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.img-fit-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
